@@ -6,22 +6,28 @@
 
 <div class=container *ngIf="!loading">
     <div class="row mt-5">
-        <div class="">
-            <input type="file" (change)="fileChange($event)">
-            <label for="">Select file</label>
+        <div class="col-md-8 offset-md-2">
+            <div class="text-center">
+                <h2 class="my-2 title">Image Classifier</h2>
+                <label for="" class="text-center bg-aqua mt-5">Select file</label>
+                <br>
+                <input type="file" (change)="fileChange($event)" class="btn">
+            </div>
+            
+            <button (click)="loadPredictions()" class="btn btn-danger btn-block mt-3">Scan</button>
         </div>
     </div>
-
-    <div class="row">
-        <img id="img" [src]="imgSrc" alt="" class="img-thumbnail img">
-    </div>
-
-    <button (click)="loadPredictions()">Scan</button>
     
     <div class="row">
-        <div>
-            <div *ngFor="let item of predictions">
-                {{item.className}} - {{item.probability | percent}}
+        <div class="col-md-12  mt-3 cards-container">
+            <div class="card-image">
+                <img id="img" [src]="imgSrc" alt="" class="img-thumbnail card">
+            </div> 
+        
+            <div class="m-2">
+                <div *ngFor="let item of predictions">
+                    <span class="badge badge-pill badge-primary">{{item.className}} - {{item.probability | percent}}</span>
+                </div>
             </div>
         </div>
     </div>
