@@ -1,0 +1,28 @@
+<div class="row">
+    <div *ngIf="loading" class="loading">
+        <img src="../../../assets/Infinity-1s-200px.svg" alt="">
+    </div>
+</div>
+
+<div class=container *ngIf="!loading">
+    <div class="row mt-5">
+        <div class="">
+            <input type="file" (change)="fileChange($event)">
+            <label for="">Select file</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <img id="img" [src]="imgSrc" alt="" class="img-thumbnail img">
+    </div>
+
+    <button (click)="loadPredictions()">Scan</button>
+    
+    <div class="row">
+        <div>
+            <div *ngFor="let item of predictions">
+                {{item.className}} - {{item.probability | percent}}
+            </div>
+        </div>
+    </div>
+</div>

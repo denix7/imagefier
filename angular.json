@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-tensorflow"
+    }
+  },
+  "defaultProject": "ng-tensorflow",
+  "cli": {
+    "analytics": false
+  }
 }
