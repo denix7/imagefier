@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ImageClassifierComponent } from './components/image-classifier/image-classifier.component';
 import * as mobilenet from '@tensorflow-models/mobilenet';
+import { VideoClassifierComponent } from './components/video-classifier/video-classifier.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImageClassifierComponent
+    ImageClassifierComponent,
+    VideoClassifierComponent
   ],
   imports: [
     BrowserModule
