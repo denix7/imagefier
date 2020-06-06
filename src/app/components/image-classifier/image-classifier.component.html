@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<div class=container *ngIf="!loading">
+<div class="container" *ngIf="!loading">
     <div class="row mt-5">
         <div class="col-md-8 offset-md-2">
             <div class="text-center">
@@ -18,13 +18,13 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="col-md-12  mt-3 cards-container">
+    <div class="row margin-button">
+        <div class="col-md-12 m-3 cards-container">
             <div class="card-image">
                 <img id="img" [src]="imgSrc" alt="" class="img-thumbnail card">
             </div> 
         
-            <div class="m-2">
+            <div class="m-2 text-center">
                 <div *ngFor="let item of predictions">
                     <span class="badge badge-pill badge-primary">{{item.className}} - {{item.probability | percent}}</span>
                 </div>
