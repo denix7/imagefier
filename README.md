@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Demo
 https://image-classifier-bd932.web.app/
+
+## Screenshot
+![2020-06-30-19-25-image-classifier-bd932 web app](https://user-images.githubusercontent.com/30157934/86186618-8ba17180-bb07-11ea-81d2-790a491e0f0a.png)
